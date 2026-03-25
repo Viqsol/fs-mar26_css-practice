@@ -1,0 +1,62 @@
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $card-width;
+    height: $card-height;
+    position: relative;
+    // background-color: $color-background;
+    // border: 1px solid $color-border;
+    
+    // transition: transform $duration-hover ease;
+
+    &__photo-image {
+        display: block;
+    // box-sizing: content-box;
+        width: $card-width;
+        height: $card-width;
+        border-radius: $radius-border;
+        // padding-top: 32px;
+        // padding-bottom: 40px;
+    }
+
+    &__details-name {
+        color: $color-main-text;
+        font-weight: $font-weight-700;
+        font-size: $spacing-5;
+        text-align: center;
+    }
+
+    &__photo-rank {
+        display: block;
+        width: $spacing-8;
+        height: $spacing-8;
+        border-radius: $radius-border;
+        color: $color-rank-text;
+        background-color: $color-background-main;
+        font-weight: $font-weight-700;
+        font-size: $spacing-4;
+        text-align: center;
+        line-height: $spacing-8;
+        position: absolute;
+        top: 84px;
+        left: 158px
+    }
+
+    &__details-extra {
+        display: none;
+    }
+
+}
+
+.person:hover {
+    background-color: $color-background-hover;
+
+    .person__details-extra {
+        display: block;
+    }
+}
+
+// .temp {
+//     display: none;
+// }
