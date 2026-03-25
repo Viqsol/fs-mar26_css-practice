@@ -33,19 +33,19 @@
     @include on-750() {
     // grid-template-columns: repeat(2, 1fr);
     --columns: 2;
-  }
+    }
 
-  @include on-1000() {
+    @include on-1000() {
     // grid-template-columns: repeat(3, 1fr);
-    --columns: 4;
+        --columns: 4;
 
     // padding: 40px;
-  }
+    }
 
-  @include on-1500() {
+    @include on-1500() {
     // grid-template-columns: repeat(4, 1fr);
-    --columns: 4;
-  }
+        --columns: 4;
+    }
 
 
 }
