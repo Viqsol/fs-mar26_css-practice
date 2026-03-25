@@ -8,7 +8,7 @@
     // background-color: $color-background;
     // border: 1px solid $color-border;
     
-    // transition: transform $duration-hover ease;
+    transition: color 0s ease;
 
     &__photo-image {
         display: block;
@@ -45,11 +45,14 @@
 
     &__details-extra {
         display: none;
+        text-align: center;
     }
 
 }
 
 .person:hover {
+    // transform: scale(1.1, 1.24);
+    // height: 287px;
     background-color: $color-background-hover;
 
     .person__details-extra {
