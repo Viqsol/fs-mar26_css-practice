@@ -1,6 +1,6 @@
-@import './variables';
-@import './people';
-@import './blocks/person';
+@import './src/variables.scss';
+@import './src/people.scss';
+@import './src/blocks/person.scss';
 
 body {
   margin: 0;
