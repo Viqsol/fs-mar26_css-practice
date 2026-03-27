@@ -1,30 +1,23 @@
 .person {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: $card-width;
-    height: $card-height;
+    width: 100%;
+    padding: 10px 10px 0;
+    border-radius: 10px 10px 0 0;
     position: relative;
-    // background-color: $color-background;
-    // border: 1px solid $color-border;
-    
-    transition: color 0s ease;
+    transition: transform 1s ease;
+
+    &__photo {
+        position: relative;
+        margin-bottom: $spacing-2;
+    }
 
     &__photo-image {
         display: block;
-    // box-sizing: content-box;
         width: $card-width;
         height: $card-width;
         border-radius: $radius-border;
-        // padding-top: 32px;
-        // padding-bottom: 40px;
-    }
-
-    &__details-name {
-        color: $color-main-text;
-        font-weight: $font-weight-700;
-        font-size: $spacing-5;
-        text-align: center;
+        transition: border-radius 1s ease-out;       
     }
 
     &__photo-rank {
@@ -39,24 +32,64 @@
         text-align: center;
         line-height: $spacing-8;
         position: absolute;
-        top: 84px;
-        left: 158px
+        top: calc(50% - $spacing-4);
+        left: 158px;
     }
 
-    &__details-extra {
-        display: none;
+    &__details-name {
+        display: block;
+        color: $color-main-text;
+        font-weight: $font-weight-700;
+        font-size: $spacing-5;
         text-align: center;
     }
 
-}
+    &__details-extra {
+        position: absolute;
+        width: 100%;
+        display: none;
+        // display: flex;
+        justify-content: center;
+        color: $color-extra-text;
+        font-weight: $font-weight-400;
+        font-size: ($spacing-5 - 2);
+        text-align: center;
+        padding: 9px 10px $spacing-4;
+        border-radius: 0 0 10px 10px;
+        // background: red;
+        margin: 0 -10px;
 
-.person:hover {
-    // transform: scale(1.1, 1.24);
-    // height: 287px;
-    background-color: $color-background-hover;
+        &-sport {
+            &::after {
+                content: ', ';
+            }
+        }
 
-    .person__details-extra {
+        &-pay {
+            &::before {
+                content: ' $';
+                padding-left: 2px;
+            }
+
+            &::after {
+                content: 'M';
+            }
+        }
+    }
+
+    &:hover {       
+        background-color: $color-background-hover;
+        transform: scale(1.2);
+        z-index: 1;
+
+        .person__details-extra {
+        background-color: $color-background-hover;
         display: block;
+        }
+
+        .person__photo-image {
+            border-radius: $radius-border-hover;
+        }
     }
 }
 
